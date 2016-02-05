@@ -137,7 +137,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        tinymce.baseURL = this.options.baseURL;
 	    }
 	
-	    tinymce.init(sf.tools.extend({ selector: '.' + this.uid }, this.options.config || {}));
+	    tinymce.init(sf.tools.extend({
+	        selector: '.' + this.uid,
+	        setup: function setup(editor) {
+	            editor.on('change', function () {
+	                tinymce.triggerSave();
+	            });
+	        }
+	    }, this.options.config || {}));
 	};
 	
 	/**

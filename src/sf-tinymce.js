@@ -29,7 +29,17 @@ SfTinymce.prototype._construct = function (sf, node, options) {
         tinymce.baseURL = this.options.baseURL;
     }
 
-    tinymce.init(sf.tools.extend({selector: '.' + this.uid}, this.options.config || {}));
+    tinymce.init(sf.tools.extend(
+        {
+            selector: '.' + this.uid,
+            setup: function (editor) {
+                editor.on('change', function () {
+                    tinymce.triggerSave();
+                });
+            }
+        },
+        this.options.config || {})
+    );
 
 };
 

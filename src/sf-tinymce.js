@@ -27,8 +27,6 @@ SfTinymce.prototype._construct = function (sf, node, options) {
 
     if (this.options.baseURL) {
         tinymce.baseURL = this.options.baseURL;
-    } else {
-        console.warn('You haven\'t specified baseURL path to tinyMCE resources')
     }
 
     tinymce.init(sf.tools.extend({selector: '.' + this.uid}, this.options.config || {}));

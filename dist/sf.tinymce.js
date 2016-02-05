@@ -135,11 +135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    if (this.options.baseURL) {
 	        tinymce.baseURL = this.options.baseURL;
-	    } else {
-	        console.warn('You haven\'t specified baseURL path to tinyMCE resources');
 	    }
-	
-	    console.log(this.options.config);
 	
 	    tinymce.init(sf.tools.extend({ selector: '.' + this.uid }, this.options.config || {}));
 	};

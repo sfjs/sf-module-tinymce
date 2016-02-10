@@ -29,7 +29,7 @@ SfTinymce.prototype._construct = function (sf, node, options) {
         tinymce.baseURL = this.options.baseURL;
     }
 
-    tinymce.init(sf.tools.extend(
+    tinymce.init(Object.assign(
         {
             selector: '.' + this.uid,
             setup: function (editor) {

@@ -137,7 +137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        tinymce.baseURL = this.options.baseURL;
 	    }
 	
-	    tinymce.init(sf.tools.extend({
+	    tinymce.init((0, _assign2.default)({
 	        selector: '.' + this.uid,
 	        setup: function setup(editor) {
 	            editor.on('change', function () {

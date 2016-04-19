@@ -87,6 +87,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = undefined;
+	
 	var _assign = __webpack_require__(3);
 	
 	var _assign2 = _interopRequireDefault(_assign);
@@ -94,11 +99,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _create = __webpack_require__(18);
 	
 	var _create2 = _interopRequireDefault(_create);
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = undefined;
 	
 	var _sf = __webpack_require__(1);
 	
